@@ -16,6 +16,21 @@ const enterWithMusic = document.getElementById('enterWithMusic');
 const enterSilent = document.getElementById('enterSilent');
 const gateStatus = document.getElementById('gateStatus');
 const speechText = 'Selamat ulang tahun yang ke-19, Nikita! Semoga hari ini penuh kebahagiaan, tawa, dan kejutan manis. Terima kasih sudah menjadi adik yang hebat. Semoga kamu selalu sehat, semua impianmu tercapai, dan bahagia selalu. Kakak selalu menyayangimu.';
+
+const glitchName = document.querySelector('.glitch-name');
+if (glitchName && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  window.setInterval(() => {
+    glitchName.classList.add('is-glitching');
+    glitchName.textContent = 'Nikitul';
+    glitchName.dataset.text = 'Nikitul';
+
+    window.setTimeout(() => {
+      glitchName.textContent = 'Nikita!';
+      glitchName.dataset.text = 'Nikita!';
+      glitchName.classList.remove('is-glitching');
+    }, 420);
+  }, 3200);
+}
 const speechSynthesis = window.speechSynthesis;
 const gsap = window.gsap;
 let resumeMusicAfterVideo = false;
