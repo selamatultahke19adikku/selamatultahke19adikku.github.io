@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#160e38" />
+    <title>Selamat Ulang Tahun, Nikita!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=8" />
+  </head>
+  <body>
+    <div class="photo-background" aria-hidden="true">
+      <div class="photo-slide photo-slide-one is-active"></div>
+      <div class="photo-slide photo-slide-two"></div>
+    </div>
+    <div class="aurora aurora-one"></div>
+    <div class="aurora aurora-two"></div>
+    <canvas id="stars" aria-hidden="true"></canvas>
+
+    <nav class="top-nav" aria-label="Navigasi utama">
+      <a class="brand" href="#" aria-label="Beranda">
+        <span class="brand-mark">N</span>
+        <span>Nikita's Day</span>
+      </a>
+      <span class="occasion"><span></span> SABTU, 21 NOVEMBER 2026</span>
+    </nav>
+
+    <main class="experience">
+      <section class="portrait" aria-label="Kartu ucapan ulang tahun">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <svg class="cake" viewBox="0 0 360 340" role="img" aria-label="Kue ulang tahun dengan lilin menyala">
+          <defs>
+            <linearGradient id="cakeSide" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f8a9d0" />
+              <stop offset=".52" stop-color="#e77eb7" />
+              <stop offset="1" stop-color="#a953a2" />
+            </linearGradient>
+            <linearGradient id="cakeTop" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#fff5ec" />
+              <stop offset=".65" stop-color="#ffd9e8" />
+              <stop offset="1" stop-color="#eab6ed" />
+            </linearGradient>
+            <linearGradient id="cakePlate" x1="0" y1="0" x2="0" y2="1">
+              <stop stop-color="#f7eaff" />
+              <stop offset="1" stop-color="#aa8ee2" />
+            </linearGradient>
+            <linearGradient id="candleStripe" x1="0" y1="0" x2="1" y2="1">
+              <stop stop-color="#fff9f5" />
+              <stop offset="1" stop-color="#ff9bc4" />
+            </linearGradient>
+            <radialGradient id="flameFill" cx=".35" cy=".25">
+              <stop stop-color="#fffbd0" />
+              <stop offset=".48" stop-color="#ffd46e" />
+              <stop offset="1" stop-color="#ff8c8c" />
+            </radialGradient>
+            <filter id="cakeGlow" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="9" />
+            </filter>
+          </defs>
+          <ellipse cx="180" cy="298" rx="125" ry="17" fill="#100927" opacity=".35" filter="url(#cakeGlow)" />
+          <ellipse cx="180" cy="282" rx="133" ry="25" fill="url(#cakePlate)" />
+          <ellipse cx="180" cy="277" rx="117" ry="17" fill="#fff3ff" opacity=".9" />
+          <path d="M75 174h210v86c0 16-13 29-29 29H104c-16 0-29-13-29-29z" fill="url(#cakeSide)" />
+          <path d="M75 205h210v11H75z" fill="#ffdbef" opacity=".56" />
+          <path d="M75 174c0-34 47-61 105-61s105 27 105 61v14c-10 0-10 18-21 18s-11-18-22-18-11 20-22 20-11-18-22-18-11 18-22 18-11-18-22-18-11 18-22 18-11-18-22-18-11 16-22 16-11-16-22-16z" fill="url(#cakeTop)" />
+          <path d="M94 165c22-22 49-32 84-32" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".6" />
+          <g fill="#fff4b6">
+            <circle cx="117" cy="216" r="4" /><circle cx="153" cy="244" r="3" />
+            <circle cx="207" cy="221" r="4" /><circle cx="247" cy="246" r="3" />
+          </g>
+          <g fill="#aaf0dc">
+            <path d="m133 231 13-4 2 5-13 4z" /><path d="m224 205 13 4-2 5-13-4z" />
+          </g>
+          <g fill="#c6a9ff">
+            <path d="m177 252 12-5 2 5-12 5z" /><path d="m101 246 12-5 2 5-12 5z" />
+          </g>
+          <rect x="169" y="69" width="22" height="82" rx="9" fill="url(#candleStripe)" />
+          <path d="m169 92 22-12v11l-22 12zm0 28 22-12v11l-22 12z" fill="#ec79ae" opacity=".72" />
+          <g id="cakeFlame">
+            <path d="M180 68c-20-20 1-39 4-53 16 19 20 34 8 50 12-5 17-17 14-26 16 20 8 43-10 48-15 4-27-5-25-18 2-9 8-14 9-22z" fill="url(#flameFill)" />
+            <path d="M182 66c-5-8 3-14 6-20 7 11 8 19 1 24-4 3-8 1-7-4z" fill="#fff5c3" />
+          </g>
+          <g fill="#fff2c2">
+            <path d="m77 113 3 8 8 3-8 3-3 8-3-8-8-3 8-3z" />
+            <path d="m283 126 2 6 6 2-6 2-2 6-2-6-6-2 6-2z" />
+            <circle cx="106" cy="90" r="3" /><circle cx="255" cy="92" r="3" />
+          </g>
+        </svg>
+        <div class="portrait-footer">
+          <span>UNTUK NIKITA</span>
+          <span>Hari yang penuh keajaiban <i>✦</i></span>
+        </div>
+      </section>
+
+      <section class="letter">
+        <p class="eyebrow"><span>✦</span> Untuk adikku tersayang</p>
+        <h1>Selamat ulang<br />tahun ke-19,<br /><em>Nikita!</em></h1>
+        <p class="lead">
+          Selamat memasuki usia 19 tahun! Semoga babak barumu dipenuhi tawa,
+          kejutan manis, mimpi-mimpi besar, dan banyak momen kecil
+          yang bikin kamu bahagia.
+        </p>
+
+        <div class="wish-line">
+          <span class="wish-icon" aria-hidden="true">✿</span>
+          <p>Tetap jadi Nikita yang baik hati, berani, dan hebat.</p>
+        </div>
+
+        <div class="actions">
+          <button id="yesBtn" class="btn btn-primary" type="button">
+            <span>Buka ucapanmu</span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </button>
+          <button id="speakBtn" class="btn btn-glass" type="button">
+            <span aria-hidden="true">▶</span>
+            <span>Dengarkan ucapan</span>
+          </button>
+        </div>
+        <span id="speechStatus" class="speech-status" aria-live="polite"></span>
+        <div class="video-invite">
+          <span class="video-invite-label">PESAN SPESIAL BUAT NIKITA</span>
+          <button id="openVideo" class="btn btn-glass video-button" type="button" aria-haspopup="dialog">
+            <span class="video-play-icon" aria-hidden="true">▶</span>
+            <span>Ucapan dari Hambalang</span>
+            <span class="video-button-arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <section class="birthday-extras" aria-labelledby="wishesTitle">
+      <div class="section-heading">
+        <p class="eyebrow"><span>✦</span> Babak baru, harapan baru</p>
+        <h2 id="wishesTitle">Semoga umur 19<br />penuh <em>hal baik.</em></h2>
+        <p>Doa-doa kecil untuk menemani setiap langkahmu tahun ini.</p>
+      </div>
+
+      <div class="wish-grid">
+        <article class="wish-card">
+          <span class="wish-number">01 / BAHAGIA</span>
+          <span class="wish-card-icon" aria-hidden="true">☼</span>
+          <h3>Hari-hari yang menyenangkan</h3>
+          <p>Semoga selalu ada alasan untuk tertawa, beristirahat, dan menikmati hal-hal sederhana.</p>
+        </article>
+        <article class="wish-card">
+          <span class="wish-number">02 / IMPIAN</span>
+          <span class="wish-card-icon" aria-hidden="true">✧</span>
+          <h3>Mimpi yang makin dekat</h3>
+          <p>Semoga setiap usaha membawamu selangkah lebih dekat ke hal-hal yang kamu cita-citakan.</p>
+        </article>
+        <article class="wish-card">
+          <span class="wish-number">03 / DIRIMU</span>
+          <span class="wish-card-icon" aria-hidden="true">♡</span>
+          <h3>Tumbuh dengan caramu</h3>
+          <p>Nggak perlu buru-buru. Semoga kamu selalu percaya pada diri sendiri dan bangga dengan prosesmu.</p>
+        </article>
+      </div>
+
+      <div class="mystery-section">
+        <div class="mystery-heading">
+          <span class="mystery-sparkle" aria-hidden="true">✦</span>
+          <p class="eyebrow">PSSST... ADA SESUATU!</p>
+          <h2>Hadiahmu masih <em>misteri.</em></h2>
+          <p>Buka kotaknya satu per satu. Siapa tahu ada petunjuk kecil di dalamnya 👀</p>
+        </div>
+        <div class="gift-grid">
+          <button class="gift-card" type="button" aria-expanded="false">
+            <span class="gift-box" aria-hidden="true"><span class="gift-ribbon"></span><span class="gift-bow">⌁</span></span>
+            <span class="gift-label">misteri</span>
+            <span class="gift-hint" hidden>Kado dalam perjalanan! 🎁</span>
+            <span class="gift-action">Ketuk untuk buka <span aria-hidden="true">↗</span></span>
+          </button>
+        </div>
+        <p class="mystery-footnote">Sabar menunggu ya—kadonya sedang dalam perjalanan! 🎂</p>
+      </div>
+
+      <p class="closing-note">Selamat bertualang di usia 19, Nikita. Kakak selalu dukung kamu. <span>♡</span></p>
+    </section>
+
+    <aside class="music-player" aria-label="Pemutar backsound">
+      <audio
+        id="birthdayMusic"
+        preload="none"
+        loop
+        src="BARU%21%20Gendhing%20Selamat%20Ulang%20Tahun%20Bahasa%20Jawa%20%28Javanese%20Birthday%20Song%29%20Cipt.%20Ki%20Ages%20-%20BornJavanese.mp3"
+      ></audio>
+      <button id="musicToggle" class="music-toggle" type="button" aria-label="Putar musik" aria-pressed="false">
+        <span class="music-art" aria-hidden="true">♫</span>
+        <span class="music-copy">
+          <strong>Gendhing ulang tahun</strong>
+          <small id="musicStatus" aria-live="polite">Memulai musik…</small>
+        </span>
+        <span class="music-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      </button>
+    </aside>
+
+    <div id="welcomeGate" class="welcome-gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+      <div class="gate-card">
+        <div class="gate-note" aria-hidden="true">♫</div>
+        <p class="gate-kicker">ADA KEJUTAN UNTUK NIKITA</p>
+        <h2 id="gateTitle">Nikita genap<br />19 tahun! 🎂</h2>
+        <p class="gate-from">Dari Kakak Brili Ganteng ✨</p>
+        <p class="gate-copy">Klik untuk membuka ucapan dan mendengarkan gendhing Jawa spesial di hari istimewamu.</p>
+        <button id="enterWithMusic" class="btn btn-primary gate-primary" type="button" autofocus>
+          <span>Mulai dengan musik</span>
+          <span class="arrow" aria-hidden="true">▶</span>
+        </button>
+        <button id="enterSilent" class="gate-skip" type="button">Lanjut tanpa musik</button>
+        <p id="gateStatus" class="gate-status" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div class="side-note" aria-hidden="true">BUAT HARAPAN · JALANI CERITA · 2026</div>
+
+    <div id="successModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="confetti" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="modal-card">
+        <button id="closeModal" class="modal-close" type="button" aria-label="Tutup">×</button>
+        <div class="modal-badge" aria-hidden="true">✦</div>
+        <p class="modal-kicker">HARI INI MILIKMU</p>
+        <h2 id="modalTitle">Selamat ulang tahun ke-19, Nikita! 🎂</h2>
+        <p class="modal-copy">
+          Semoga sehat, bahagia, sukses, dan selalu dikelilingi orang-orang
+          yang tulus menyayangimu.
+        </p>
+      </div>
+    </div>
+
+    <div id="videoModal" class="modal video-modal hidden" role="dialog" aria-modal="true" aria-labelledby="videoTitle">
+      <div class="video-modal-card">
+        <button id="closeVideo" class="modal-close" type="button" aria-label="Tutup video">×</button>
+        <p class="modal-kicker">PESAN SPESIAL BUAT NIKITA</p>
+        <h2 id="videoTitle">Ucapan dari Hambalang</h2>
+        <video
+          id="birthdayVideo"
+          controls
+          playsinline
+          preload="metadata"
+          aria-label="Video ucapan selamat ulang tahun"
+          src="Ucapan%20selamat%20ulang%20tahun%20dari%20Prabowo%20%23prabowo%20%23prabowopresiden2024%20%23prabowosubianto%20%23shorts%20-%20SUNDANESE160%20%28720p%2C%20h264%29.mp4"
+        ></video>
+        <p id="videoStatus" class="video-status" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div id="giftModal" class="modal gift-modal hidden" role="dialog" aria-modal="true" aria-labelledby="giftTitle">
+      <div class="gift-modal-card">
+        <button id="closeGift" class="modal-close" type="button" aria-label="Tutup hadiah">×</button>
+        <p class="modal-kicker">KEJUTAN UNTUK NIKITA</p>
+        <h2 id="giftTitle">Hadiahnya Besok</h2>
+        <img
+          id="giftImage"
+          src="ambalabut.jpg"
+          alt="Gambar kejutan hadiah"
+          class="gift-modal-image"
+        />
+        <audio
+          id="giftAudio"
+          controls
+          preload="metadata"
+          src="Hadiah_Masih_di_Jalan.mp3"
+          aria-label="Pesan audio hadiah masih di jalan"
+        ></audio>
+        <p id="giftStatus" class="gift-status" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js" defer></script>
+    <script src="script.js?v=13" defer></script>
+  </body>
+</html>
